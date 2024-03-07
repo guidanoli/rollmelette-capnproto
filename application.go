@@ -4,6 +4,7 @@ import (
 	"context"
 	"log/slog"
 
+	"capnproto.org/go/capnp/v3"
 	"github.com/gligneul/rollmelette"
 )
 
@@ -15,7 +16,14 @@ func (a *MyApplication) Advance(
 	deposit rollmelette.Deposit,
 	payload []byte,
 ) error {
-	// Handle advance input
+	msg, err := capnp.Unmarshal(payload)
+	if err != nil {
+		return err
+	}
+	_, err = ReadRootAdvanceRequest(msg)
+	if err != nil {
+		return err
+	}
 	return nil
 }
 
