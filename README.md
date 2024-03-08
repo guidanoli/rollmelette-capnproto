@@ -1,4 +1,7 @@
-# Rollmelette Template
+# Rollmelette + Cap'n Proto
 
-This repository contains a minimal template for Rollmelette projects.
-For more information about Rollmelette, take a look at the [README](https://github.com/gligneul/rollmelette#rollmelette) on the repository.
+## Dependencies
+
+- All dependencies for [`rollmelette`](https://github.com/gligneul/rollmelette)
+- [`capnp`](https://capnproto.org/install.html)
+- [`go-capnp`](https://github.com/capnproto/go-capnp/blob/main/docs/Installation.md)
