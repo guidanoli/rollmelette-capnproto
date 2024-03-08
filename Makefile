@@ -1,4 +1,4 @@
-CAPNP_SCHEMA=calculator.capnp
+CAPNP_SCHEMA=request.capnp
 
 CAPNP_GO_SUBMODULE=go-capnp
 CAPNP_GO_BINDINGS=${CAPNP_SCHEMA}.go
