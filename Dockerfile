@@ -23,11 +23,11 @@ ENV CGO_ENABLED=1
 ENV CC=riscv64-linux-gnu-gcc
 ENV PATH=/usr/local/go/bin:${PATH}
 
-COPY go.mod .
-COPY go.sum .
+COPY backend/go.mod .
+COPY backend/go.sum .
 RUN go mod download
 
-COPY . .
+COPY backend .
 RUN go build -o app .
 
 # runtime stage: produces final image that will be executed

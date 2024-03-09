@@ -18,10 +18,3 @@ struct AdvanceRequest @0x9f15675dca75dd4d {
         }
     }
 }
-
-struct InspectRequest @0xdeef9407cb2e1380 {
-    union {
-        value @0 :Void;
-        opCount @1 :Void;
-    }
-}
